@@ -3,7 +3,7 @@ import socket
 s = socket.socket()
 print("Berjaya buat sokett")
 
-port = 8888
+port = 8881
 
 s.bind(('', port))
 print("Berjaya bind soket di port: " + str(port))
