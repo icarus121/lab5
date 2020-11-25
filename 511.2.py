@@ -15,8 +15,8 @@ while True:
         c, addr = s.accept()
         print("Dapat capaian dari: " + str(addr))
 
-        c.sendto(b'Terima Kasih!')
-        buffer = c.recvfrom(1024)
+        c.sendto(b'Terima Kasih!', ('', port))
+        buffer, addr = c.recvfrom(1024)
         print(buffer)
 c.close()
 
