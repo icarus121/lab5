@@ -1,6 +1,5 @@
 import socket
 import sys
-import json
 import os
 from _thread import *
 
@@ -26,7 +25,7 @@ print("Socket is listening")
 def threaded_c(connection):
     connection.send(str.encode('Welcome to the Server\n'))
     while True:
-        data = connection.recv(2048)
+        data = connection.recv(4096)
         reply = 'Server Says: ' + data.decode('utf-8')
         if not data:
             break
