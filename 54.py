@@ -15,7 +15,6 @@ try:
 except socket.error as e:
     print(str(e))
 
-
 #s.bind(('', port))
 print("Socket binded to: " + str(port))
 
@@ -41,7 +40,7 @@ while True:
 	print('Thread Number: ' + str(ThreadCount))
 
 	data = c.recv(4096)
-	data = data.decode("utf 8")
+	data = data.decode("utf-8")
 	print(data)
 
 s.close()
